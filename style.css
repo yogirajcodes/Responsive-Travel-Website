@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Comme&family=Heebo&family=Lato:wght@300&family=Public+Sans:wght@100&family=Raleway:wght@100&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,300;1,500&family=Signika+Negative:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Raleway:wght@100&family=Signika+Negative:wght@700&display=swap');
+
+
+
+:root {
+    --main--color: #000000;
+    --black: #13131a;
+    --bg: white;
+    --border: .1rem solid rgba(0, 0, 0, 0.3);
+}
+
+* {
+    font-family: 'Signika Negative', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    transition: 0.5s;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg);
+}
+
+.header {
+    background: rgb(44, 146, 230);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 7rem;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: white;
+}
+
+
+.header .navbar a:hover {
+    color: var(--main--color);
+    border-bottom: 0.1rem solid var(--main--color);
+    padding-bottom: 0.5rem;
+}
+
+.header .icons div {
+    color: white;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover {
+    color: black;
+    ;
+}
+
+#menubtn {
+    display: none;
+}
+
+.header .searchform {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .searchform.active {
+    transform: scaleY(1);
+}
+
+.header .searchform input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: black;
+    padding: 1rem;
+    text-transform: none;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    border-left: var(--border);
+}
+
+.header .searchform label {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 0;
+    color: black;
+    padding: 1rem;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    border-right: var(--border);
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    transform: scale(1.2);
+}
+
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to left, rgba(228, 29, 29, 0) 0, rgb(8, 138, 168) 90%, rgb(8, 138, 168) 1%), url(images/home.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+.home .content {
+    max-width: 60rem;
+}
+
+.home .content h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.home .content h1 i {
+    font-family: 'Signika Negative', sans-serif;
+    color: white;
+}
+
+
+
+.home .content p {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    padding: 2rem 0;
+    color: white;
+    line-height: 1.8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home .content h1 {
+    color: #006879;
+}
+
+.home .content h1 span {
+    color: #00121a;
+}
+
+.heading {
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span {
+    color: #095371;
+    text-transform: uppercase;
+}
+
+.heading span {
+    color: #1e73a6;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background: #0069a8;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: white;
+}
+
+.about .row .content p {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    line-height: 1.8rem;
+    color: white;
+    font-family: Public Sans;
+}
+
+.exp {
+    display: flex;
+    padding: 3rem 0rem;
+}
+
+.exp1 {
+    margin-right: 15px;
+    color: white;
+    font-family: Public Sans;
+}
+
+.exp1 h1 {
+    font-size: 2.8rem;
+    color: white;
+    font-family: Public Sans;
+}
+
+
+.menu .boxcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+
+}
+
+.menu .boxcontainer .box {
+    padding: 5rem;
+    text-align: center;
+    border: 1px solid black;
+    background-color: #ffffff;
+    border-bottom-right-radius: 10%;
+}
+
+.menu .boxcontainer .box img {
+    height: 15rem;
+}
+
+.menu .boxcontainer .box h3 {
+    color: black;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .boxcontainer .box .price {
+    color: black;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+
+.menu .boxcontainer .box .price span {
+    color: black;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.menu .boxcontainer .box:hover {
+    background-color: rgb(0, 62, 112);
+    ;
+}
+
+.menu .boxcontainer .box:hover>* {
+    color: white;
+}
+
+.menu .boxcontainer .box:hover .btn {
+    background-color: black;
+}
+
+.deals .boxcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.deals .boxcontainer .box {
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.deals .boxcontainer .box image {
+    padding: 2.5rem 0;
+
+}
+
+.deals .boxcontainer .box:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.deals .boxcontainer .box img {
+    height: 30rem;
+    width: 100%;
+}
+
+.deals .boxcontainer .box .content h3 {
+    color: #144ca4;
+    font-size: 2.5rem;
+}
+
+.stars {
+    color: yellow;
+    font-size: 1.5rem;
+}
+
+.deals .boxcontainer .box .content .stars i {
+    font-size: 1.7rem;
+    color: var(--main--color)
+}
+
+.deals .boxcontainer .box .stars .price {
+    font-size: 2.5rem;
+    color: #144ca4;
+}
+
+.deals .boxcontainer .box .stars .price span {
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+.review .boxcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+
+}
+
+.review .boxcontainer .box {
+    border: 1px solid black;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.review .boxcontainer .box p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: black;
+    padding: 2rem 0;
+}
+
+.review .boxcontainer .box img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .boxcontainer .box h3 {
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: black;
+}
+
+.review .boxcontainer .box .stars i {
+    font-size: 1.5rem;
+    color: yellow;
+}
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    background: white;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact .row form .btn {
+    background: black;
+    color: white;
+}
+
+.contact .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: black;
+}
+
+.contact .row form .inputbox {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.contact .row form .inputbox span {
+    color: black;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .row form .inputbox input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: black;
+    text-transform: none;
+    background: none;
+}
+
+.blogs .boxcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.blogs .boxcontainer .box {
+    border: 1px solid black;
+    background: #005984f7;
+}
+
+.blogs .boxcontainer .box .image {
+    height: 25rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.blogs .boxcontainer .box .image img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blogs .boxcontainer .box .image img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blogs .boxcontainer .box:hover .image img {
+    transform: scale(1.2);
+}
+
+.blogs .boxcontainer .box .content {
+    padding: 2rem;
+}
+
+.blogs .boxcontainer .box .content .title {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color: white;
+}
+
+.blogs .boxcontainer .box .content .title:hover {
+    color: blue;
+}
+
+.blogs .boxcontainer .box .content span {
+    color: white;
+    display: block;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.blogs .boxcontainer .box .content p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: white;
+    padding: 1rem 0;
+    font-family: Public Sans;
+    font-weight: bolder;
+}
+
+.footer {
+    background: rgb(44, 146, 230);
+    text-align: center;
+}
+
+.footer .share {
+    padding: 1rem 0;
+}
+
+.footer .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: white;
+    border: 1px solid white;
+    margin: 1rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover {
+    color: black;
+    background: white;
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a {
+    padding: 1rem 2rem;
+    color: white;
+    border: 1px solid white;
+    font-size: 2rem;
+    border-radius: 5px;
+}
+
+.footer .links a:hover {
+    background: white;
+    color: black;
+}
+
+.footer .credit h3 {
+    font-size: 1.2rem;
+    color: white;
+    padding: .5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 0.2rem;
+}
+
+.footer .credit span {
+    color: black;
+}
